@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Custom loading</title>
+</head>
+<body>
+	<h1>Custom loading</h1>
+	<canvas id="canvas"></canvas>
+	
+	<button class="myButton">haha</button>
+
+	
+	<script type="text/javascript">
+		
+		Module({
+            canvas: document.getElementById('canvas')
+        })
+        .then(() => {
+            console.log('Loaded !');
+        });
+
+		document.querySelector('.myButton').addEventListener('click', function(){
+			//alert('check la coconsoloe');
+
+		Module.ccall('myFunction', null, null);
+			
+		});
+	</script>
+	<script type="text/javascript" src="custom-loading.js"></script>
+</body>
+</html>
